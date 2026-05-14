@@ -1,0 +1,33 @@
+{
+  "personal": {
+    "name": "Zain-Ul-Abedin",
+    "tagline": "Aspiring Game Developer",
+    "email": "xainulabedinwolf@gmail.com",
+    "github": "https://github.com/Xain-Ul-Abedin",
+    "linkedin": "linkedin.com/in/zain-ul-abedin",
+    "discord": "zain.wolf",
+    "location": "Lahore, Pakistan",
+    "address": "Street LDA, House no 39, Near Govt. Filter Clinic Hospital Wahdat Colony Lahore",
+    "phone": "+92 327 4575119"
+  },
+  "about": {
+    "bio": "I am a game developer.",
+    "image": null
+  },
+  "projects": [],
+  "skills": [],
+  "experience": [],
+  "certifications": [],
+  "resume": {
+    "phone": "+92-3XX-XXXXXXX",
+    "summary": "Summary",
+    "education": {
+      "degree": "BS",
+      "institution": "PTUT",
+      "location": "Lahore",
+      "period": "2024",
+      "semester": "4th"
+    },
+    "certifications": []
+  }
+}

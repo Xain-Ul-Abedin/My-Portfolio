@@ -1,0 +1,80 @@
+@import '@fontsource/lexend';
+
+:root {
+  --background-primary: #1A1A1A;
+  --background-secondary: #2D3A2D;
+  --background-tertiary: #232820;
+  --accent-primary: #00FFC8;
+  --accent-secondary: #607362;
+  --accent-tertiary: #CABCA5;
+  --text-primary: #F8F5F5;
+  --text-secondary: #CABCA5;
+  --text-muted: #9A9A8A;
+  --subtle-border: #48453D;
+  --subtle-hover: #3D4A3D;
+  --subtle-card: #252525;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Lexend', sans-serif;
+  background-color: var(--background-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.app {
+  min-height: 100vh;
+  position: relative;
+}
+
+main {
+  position: relative;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--subtle-border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-secondary);
+}
+
+::selection {
+  background: var(--accent-primary);
+  color: var(--background-primary);
+}

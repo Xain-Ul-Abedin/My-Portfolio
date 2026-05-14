@@ -1,0 +1,283 @@
+{
+  "personal": {
+    "name": "Zain-Ul-Abedin",
+    "tagline": "Aspiring Game Developer | Designer | QA Specialist",
+    "email": "xainulabedinwolf@gmail.com",
+    "phone": "+92 327 4575119",
+    "github": "https://github.com/Xain-Ul-Abedin",
+    "discord": "zain.wolf",
+    "linkedin": "linkedin.com/in/zain-ul-abedin",
+    "location": "Wahdat Colony, Lahore, Pakistan",
+    "address": "Street LDA, House no 39, Near Govt. Filter Clinic Hospital Wahdat Colony Lahore"
+  },
+  "about": {
+    "bio": "I am a BS Software Engineering student specializing in SQA and Project Management. After excelling in SQA internship roles, I am now focusing my passion on becoming a professional Game Developer. I also bring years of self-taught freelance design experience, bridging the gap between quality standards and creative gaming experiences.",
+    "image": "/src/assets/hero.jpg"
+  },
+  "projects": [
+    {
+      "title": "Pong",
+      "subtitle": "Pawng - Custom Pong Game",
+      "engine": "Unity 2D",
+      "description": "A polished Pong remake featuring custom ball and paddle designs with neon UI aesthetics. Includes multiple game modes and smooth gameplay mechanics.",
+      "tech": [
+        "Unity 2D",
+        "C#",
+        "UI Design"
+      ],
+      "status": "Ongoing",
+      "github": "https://github.com/Xain-Ul-Abedin",
+      "demo": null,
+      "image": null
+    },
+    {
+      "title": "Pawng",
+      "subtitle": "Multiplayer Ball Game",
+      "engine": "Godot 4",
+      "description": "A ball physics game featuring single player and multiplayer modes. Built with Godot 4's robust physics engine for responsive and satisfying gameplay.",
+      "tech": [
+        "Godot 4",
+        "GDScript",
+        "Physics 2D"
+      ],
+      "status": "Ongoing",
+      "github": "https://github.com/Xain-Ul-Abedin",
+      "demo": null,
+      "tagline": "SQA Specialist | Aspiring Game Developer | Designer"
+    },
+    {
+      "title": "Coffee Haven Enterprise",
+      "subtitle": "3-Tier .NET Management System",
+      "engine": ".NET Core / SQL Server",
+      "description": "Enterprise-level POS and inventory system built with 3-tier architecture. Features a comprehensive SQA plan with 25+ documented test cases, including sanity, functional, and negative testing. Implements RBAC and secure data persistence using ADO.NET.",
+      "tech": [
+        ".NET Core",
+        "C#",
+        "SQL Server",
+        "SQA",
+        "ADO.NET",
+        "Manual Testing"
+      ],
+      "status": "Completed",
+      "github": "https://github.com/Xain-Ul-Abedin/CoffeeHavenApp",
+      "demo": null,
+      "image": null
+    }
+  ],
+  "skills": [
+    {
+      "category": "Game Development",
+      "items": [
+        {
+          "name": "Unity 2D/3D",
+          "level": "Junior"
+        },
+        {
+          "name": "C# Scripting",
+          "level": "Junior"
+        },
+        {
+          "name": "Godot Engine",
+          "level": "Junior"
+        },
+        {
+          "name": "Game Architecture & Design",
+          "level": "Junior"
+        },
+        {
+          "name": "Game Physics",
+          "level": "Junior"
+        },
+        {
+          "name": "Pixelart",
+          "level": "Junior"
+        },
+        {
+          "name": "Assets Design",
+          "level": "Junior"
+        },
+        {
+          "name": "Animations",
+          "level": "Junior"
+        },
+        {
+          "name": "GDScript",
+          "level": "Learning"
+        },
+        {
+          "name": "Shaders (HLSL/GLSL)",
+          "level": "Learning"
+        },
+        {
+          "name": "Blender (3D Modeling)",
+          "level": "Learning"
+        }
+      ]
+    },
+    {
+      "category": "Design & Creative",
+      "items": [
+        {
+          "name": "UI/UX Design",
+          "level": "Advanced"
+        },
+        {
+          "name": "Canva",
+          "level": "Advanced"
+        },
+        {
+          "name": "Figma / Adobe XD",
+          "level": "Advanced"
+        },
+        {
+          "name": "Prototyping",
+          "level": "Advanced"
+        },
+        {
+          "name": "Graphic Design",
+          "level": "Intermediate"
+        },
+        {
+          "name": "Adobe Photoshop",
+          "level": "Intermediate"
+        },
+        {
+          "name": "Adobe Illustrator",
+          "level": "Junior"
+        }
+      ]
+    },
+    {
+      "category": "Quality & Management",
+      "items": [
+        {
+          "name": "Software QA (SQA) & QC",
+          "level": "Advanced"
+        },
+        {
+          "name": "Manual & BlackBox Testing",
+          "level": "Advanced"
+        },
+        {
+          "name": "Testcase & Bug Reporting",
+          "level": "Advanced"
+        },
+        {
+          "name": "Asana (Project Management)",
+          "level": "Advanced"
+        },
+        {
+          "name": "Auditing & Documentation",
+          "level": "Advanced"
+        },
+        {
+          "name": "Agile / FDD / TDD",
+          "level": "Intermediate"
+        },
+        {
+          "name": "Version Control (Git)",
+          "level": "Intermediate"
+        },
+        {
+          "name": "Postman (API Testing)",
+          "level": "Junior"
+        }
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "title": "SQA & Project Management Intern",
+      "company": "JinnByte Pvt Ltd.",
+      "location": "FF Block, 227-CCA, DHA Phase IV, Lahore",
+      "period": "Summer 2025",
+      "duration": "3 months",
+      "marks": "Internship Completed",
+      "description": "Excelled in Manual and BlackBox testing. Responsible for creating comprehensive testcase documents, bug reporting, and auditing. Managed workflows using Asana and implemented Agile/FDD methodologies."
+    },
+    {
+      "title": "BS Software Engineering Technology",
+      "company": "Punjab Tianjin University Of Technology",
+      "location": "Lahore",
+      "period": "2024 - Present",
+      "duration": "4th Semester",
+      "marks": "3.71/4.00 CGPA",
+      "description": "Completed specialized courses in Software Quality Assurance (SQA), Quality Control (QC), and Software Operations Management (SOM). Currently in 4th semester, maintaining a CGPA of 3.71/4.00."
+    },
+    {
+      "title": "FSC Pre Engineering",
+      "company": "Creasent Collage For Boys Shadman",
+      "location": "Lahore",
+      "period": "2022 - 2024",
+      "duration": "2 Years",
+      "marks": "901/1200",
+      "description": "Completed Intermediate in Pre-Engineering with a strong focus on Mathematics and Physics. Marks: 901/1200 (75.08%)."
+    },
+    {
+      "title": "Matriculation",
+      "company": "Govt. Pilot Higher Secondary School",
+      "location": "Wahdat Colony, Lahore",
+      "period": "2020 - 2022",
+      "duration": "2 Years",
+      "marks": "1022/1100",
+      "description": "Completed Matriculation with high honors. Marks: 1022/1100 (92.91%)."
+    }
+  ],
+  "resume": {
+    "phone": "+92-3XX-XXXXXXX",
+    "summary": "Aspiring game developer with a passion for creating engaging 2D gaming experiences. Currently pursuing BS in Software Engineering Technology. Equipped with skills in Unity 2D and Godot game engines, complemented by design capabilities and QA experience. Eager to contribute to innovative game development teams.",
+    "education": {
+      "degree": "BS Software Engineering Technology",
+      "institution": "Punjab Tianjin University Of Technology",
+      "location": "Lahore, Pakistan",
+      "period": "2024 - Present",
+      "semester": "4th Semester (CGPA: 3.71/4.00)"
+    },
+    "certifications": [
+      "Google UI/UX Design Certificate",
+      "Graphics Design Specialist"
+    ]
+  },
+  "education": [
+    {
+      "degree": "BS Software Engineering Technology",
+      "institution": "Punjab Tianjin University Of Technology",
+      "location": "Lahore, Pakistan",
+      "period": "2024 - Present",
+      "note": "4th Semester | CGPA: 3.71/4.00"
+    },
+    {
+      "degree": "FSC Pre Engineering",
+      "institution": "Higher Secondary Institution",
+      "location": "Lahore, Pakistan",
+      "period": "2022 - 2024",
+      "note": "Marks: 901/1200 (75.08%)"
+    },
+    {
+      "degree": "Matriculation",
+      "institution": "Govt. Pilot Higher Secondary School",
+      "location": "Wahdat Colony, Lahore",
+      "period": "2020 - 2022",
+      "note": "Marks: 1022/1100 (92.91%)"
+    },
+    {
+      "degree": "Early Education",
+      "institution": "Govt. Pilot Higher Secondary School",
+      "location": "Wahdat Colony, Lahore",
+      "period": "Before 2020",
+      "note": "Primary & Middle Schooling"
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Google UX Design Certificate",
+      "issuer": "Google",
+      "year": "2024"
+    },
+    {
+      "name": "Graphics Design Specialist",
+      "issuer": "Self-taught",
+      "year": "2024"
+    }
+  ]
+}
