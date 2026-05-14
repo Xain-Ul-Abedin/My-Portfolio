@@ -30,8 +30,15 @@ export default function Navigation() {
     // to allow smooth scrolling to hash links.
   }, [isMobileMenuOpen]);
 
-  const handleNavClick = () => {
+  const handleNavClick = (e, href) => {
+    e.preventDefault();
     setIsMobileMenuOpen(false);
+    
+    const targetId = href.replace('#', '');
+    const elem = document.getElementById(targetId);
+    if (elem) {
+      elem.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   return (
@@ -42,7 +49,13 @@ export default function Navigation() {
         animate={{ y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <motion.a href="#home" className={styles.logo} whileHover={whileHover} whileTap={whileTap}>
+        <motion.a 
+          href="#home" 
+          className={styles.logo} 
+          whileHover={whileHover} 
+          whileTap={whileTap}
+          onClick={(e) => handleNavClick(e, '#home')}
+        >
           <span className={styles.logoIcon}>
             <IconDeviceGamepad size={24} />
           </span>
@@ -57,6 +70,7 @@ export default function Navigation() {
               className={styles.navLink}
               whileHover={whileHover}
               whileTap={whileTap}
+              onClick={(e) => handleNavClick(e, link.href)}
             >
               {link.label}
             </motion.a>
@@ -78,17 +92,18 @@ export default function Navigation() {
         {isMobileMenuOpen && (
           <motion.div
             className={styles.mobileMenu}
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
+            initial={{ opacity: 0, height: 0, padding: 0 }}
+            animate={{ opacity: 1, height: 'auto', padding: '1rem' }}
+            exit={{ opacity: 0, height: 0, padding: 0 }}
             transition={{ duration: 0.3 }}
+            style={{ overflow: 'hidden' }}
           >
             {navLinks.map((link, index) => (
               <motion.a
                 key={link.href}
                 href={link.href}
                 className={styles.mobileNavLink}
-                onClick={handleNavClick}
+                onClick={(e) => handleNavClick(e, link.href)}
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: index * 0.05 }}
