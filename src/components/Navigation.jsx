@@ -26,11 +26,8 @@ export default function Navigation() {
   }, []);
 
   useEffect(() => {
-    if (isMobileMenuOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
-    }
+    // We intentionally do not hide overflow on mobile menu open 
+    // to allow smooth scrolling to hash links.
   }, [isMobileMenuOpen]);
 
   const handleNavClick = () => {

@@ -86,9 +86,9 @@ export default function Hero() {
               </svg>
             </motion.a>
             <motion.a
-              href={`https://${personal.linkedin}`}
-              target="_blank"
-              rel="noopener noreferrer"
+              href={personal.linkedin ? `https://${personal.linkedin}` : '#'}
+              target={personal.linkedin ? "_blank" : undefined}
+              rel={personal.linkedin ? "noopener noreferrer" : undefined}
               className={styles.socialLink}
               whileHover={whileHover}
               whileTap={whileTap}
