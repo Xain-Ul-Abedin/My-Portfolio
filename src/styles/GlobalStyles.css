@@ -15,6 +15,21 @@
   --subtle-card: #252525;
 }
 
+[data-theme='light'] {
+  --background-primary: #F6FAF9;
+  --background-secondary: #EAF2F0;
+  --background-tertiary: #DFE8E5;
+  --accent-primary: #00B894;
+  --accent-secondary: #748A7A;
+  --accent-tertiary: #8C7B65;
+  --text-primary: #1A1A1A;
+  --text-secondary: #4A5A4A;
+  --text-muted: #6A7A6A;
+  --subtle-border: #DDEAE7;
+  --subtle-hover: #C5D6D1;
+  --subtle-card: #FFFFFF;
+}
+
 * {
   margin: 0;
   padding: 0;

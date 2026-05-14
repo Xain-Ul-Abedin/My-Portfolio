@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { IconHome, IconUser, IconDeviceGamepad, IconCode, IconBriefcase, IconMail, IconMenu, IconX } from '@tabler/icons-react';
+import { IconHome, IconUser, IconDeviceGamepad, IconCode, IconBriefcase, IconMail, IconMenu, IconX, IconSun, IconMoon } from '@tabler/icons-react';
 import { whileHover, whileTap } from '../styles/animations';
 import styles from './Navigation.module.css';
 
@@ -16,6 +16,9 @@ const navLinks = [
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [theme, setTheme] = useState(() => {
+    return localStorage.getItem('theme') || 'dark';
+  });
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,6 +27,11 @@ export default function Navigation() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+  }, [theme]);
 
   useEffect(() => {
     // We intentionally do not hide overflow on mobile menu open 
@@ -39,6 +47,10 @@ export default function Navigation() {
     if (elem) {
       elem.scrollIntoView({ behavior: 'smooth' });
     }
+  };
+
+  const toggleTheme = () => {
+    setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'));
   };
 
   return (
@@ -75,6 +87,15 @@ export default function Navigation() {
               {link.label}
             </motion.a>
           ))}
+          <motion.button
+            className={styles.themeToggleBtn}
+            onClick={toggleTheme}
+            whileHover={whileHover}
+            whileTap={whileTap}
+            aria-label="Toggle theme"
+          >
+            {theme === 'dark' ? <IconSun size={20} /> : <IconMoon size={20} />}
+          </motion.button>
         </div>
 
         <button
@@ -99,6 +120,13 @@ export default function Navigation() {
               {link.label}
             </a>
           ))}
+          <button
+            className={styles.mobileThemeToggle}
+            onClick={toggleTheme}
+          >
+            {theme === 'dark' ? <IconSun size={20} /> : <IconMoon size={20} />}
+            {theme === 'dark' ? 'Light Mode' : 'Dark Mode'}
+          </button>
         </div>
       )}
     </nav>
