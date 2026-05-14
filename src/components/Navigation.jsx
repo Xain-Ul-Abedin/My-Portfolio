@@ -38,13 +38,13 @@ export default function Navigation() {
   };
 
   return (
-    <motion.nav
-      className={`${styles.nav} ${isScrolled ? styles.scrolled : ''}`}
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.5 }}
-    >
-      <div className={styles.container}>
+    <nav className={`${styles.nav} ${isScrolled ? styles.scrolled : ''}`}>
+      <motion.div 
+        className={styles.container}
+        initial={{ y: -100 }}
+        animate={{ y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
         <motion.a href="#home" className={styles.logo} whileHover={whileHover} whileTap={whileTap}>
           <span className={styles.logoIcon}>
             <IconDeviceGamepad size={24} />
@@ -75,7 +75,7 @@ export default function Navigation() {
         >
           {isMobileMenuOpen ? <IconX size={24} /> : <IconMenu size={24} />}
         </motion.button>
-      </div>
+      </motion.div>
 
       <AnimatePresence>
         {isMobileMenuOpen && (
@@ -105,6 +105,6 @@ export default function Navigation() {
           </motion.div>
         )}
       </AnimatePresence>
-    </motion.nav>
+    </nav>
   );
 }
