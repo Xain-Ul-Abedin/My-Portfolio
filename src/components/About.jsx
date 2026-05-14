@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { IconUser, IconMapPin, IconDeviceGamepad, IconPalette, IconShieldCheck } from '@tabler/icons-react';
 import { fadeInUp, staggerContainer } from '../styles/animations';
@@ -6,6 +7,7 @@ import styles from './About.module.css';
 
 export default function About() {
   const { about, personal } = config;
+  const [imageLoaded, setImageLoaded] = useState(false);
 
   return (
     <section className={styles.about} id="about">
@@ -20,7 +22,15 @@ export default function About() {
           <motion.div className={styles.imageSection} variants={fadeInUp}>
             <div className={styles.imageWrapper}>
               {about.image ? (
-                <img src={about.image} alt={personal.name} className={styles.image} />
+                <>
+                  <div className={`${styles.imageLoader} ${imageLoaded ? styles.loaded : ''}`} />
+                  <img 
+                    src={about.image} 
+                    alt={personal.name} 
+                    className={`${styles.image} ${imageLoaded ? styles.visible : styles.hidden}`} 
+                    onLoad={() => setImageLoaded(true)}
+                  />
+                </>
               ) : (
                 <div className={styles.imagePlaceholder}>
                   <IconUser size={64} />

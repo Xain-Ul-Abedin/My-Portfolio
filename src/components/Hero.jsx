@@ -10,6 +10,7 @@ import avatarSrc from '../assets/Avatar.png';
 export default function Hero() {
   const { personal } = config;
   const [isGenerating, setIsGenerating] = useState(false);
+  const [imageLoaded, setImageLoaded] = useState(false);
 
   const handleDownload = async () => {
     if (isGenerating) return;
@@ -135,12 +136,16 @@ export default function Hero() {
           {/* Glowing solid border */}
           <div className={styles.avatarBorder} />
 
+          {/* Glow sweep skeleton loader */}
+          <div className={`${styles.imageLoader} ${imageLoaded ? styles.loaded : ''}`} />
+
           {/* Avatar photo — floats up/down */}
           <img
             src={avatarSrc}
             alt="Zain Ul-Abedin"
-            className={styles.avatarImg}
+            className={`${styles.avatarImg} ${imageLoaded ? styles.visible : styles.hidden}`}
             draggable={false}
+            onLoad={() => setImageLoaded(true)}
           />
         </motion.div>
       </div>
