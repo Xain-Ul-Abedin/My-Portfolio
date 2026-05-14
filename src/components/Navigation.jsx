@@ -77,46 +77,30 @@ export default function Navigation() {
           ))}
         </div>
 
-        <motion.button
+        <button
           className={styles.mobileMenuBtn}
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          whileHover={whileHover}
-          whileTap={whileTap}
           aria-label="Toggle menu"
         >
           {isMobileMenuOpen ? <IconX size={24} /> : <IconMenu size={24} />}
-        </motion.button>
+        </button>
       </motion.div>
 
-      <AnimatePresence>
-        {isMobileMenuOpen && (
-          <motion.div
-            className={styles.mobileMenu}
-            initial={{ opacity: 0, height: 0, padding: 0 }}
-            animate={{ opacity: 1, height: 'auto', padding: '1rem' }}
-            exit={{ opacity: 0, height: 0, padding: 0 }}
-            transition={{ duration: 0.3 }}
-            style={{ overflow: 'hidden' }}
-          >
-            {navLinks.map((link, index) => (
-              <motion.a
-                key={link.href}
-                href={link.href}
-                className={styles.mobileNavLink}
-                onClick={(e) => handleNavClick(e, link.href)}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: index * 0.05 }}
-                whileHover={whileHover}
-                whileTap={whileTap}
-              >
-                <link.icon size={20} />
-                {link.label}
-              </motion.a>
-            ))}
-          </motion.div>
-        )}
-      </AnimatePresence>
+      {isMobileMenuOpen && (
+        <div className={styles.mobileMenu}>
+          {navLinks.map((link, index) => (
+            <a
+              key={link.href}
+              href={link.href}
+              className={styles.mobileNavLink}
+              onClick={(e) => handleNavClick(e, link.href)}
+            >
+              <link.icon size={20} />
+              {link.label}
+            </a>
+          ))}
+        </div>
+      )}
     </nav>
   );
 }
