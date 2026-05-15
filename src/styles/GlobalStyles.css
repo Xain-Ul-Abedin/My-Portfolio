@@ -13,6 +13,8 @@
   --subtle-border: #48453D;
   --subtle-hover: #3D4A3D;
   --subtle-card: #252525;
+  --nav-bg-scrolled: rgba(26, 26, 26, 0.95);
+  --mobile-menu-bg: rgba(26, 26, 26, 0.98);
 }
 
 [data-theme='light'] {
@@ -28,6 +30,8 @@
   --subtle-border: #DDEAE7;
   --subtle-hover: #C5D6D1;
   --subtle-card: #FFFFFF;
+  --nav-bg-scrolled: rgba(246, 250, 249, 0.95);
+  --mobile-menu-bg: rgba(246, 250, 249, 0.98);
 }
 
 * {
