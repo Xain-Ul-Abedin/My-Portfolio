@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { IconBriefcase, IconSchool, IconMapPin, IconClock } from '@tabler/icons-react';
+import { IconBriefcase, IconSchool, IconMapPin, IconClock, IconExternalLink } from '@tabler/icons-react';
 import { fadeInUp, staggerContainer, whileHover, whileTap } from '../styles/animations';
 import config from '../data/config.json';
 import styles from './Experience.module.css';
@@ -82,17 +82,34 @@ export default function Experience() {
         >
           <h3 className={styles.certTitle}>Certifications</h3>
           <div className={styles.certList}>
-            {config.certifications.map((cert, i) => (
-              <motion.div
-                key={i}
-                className={styles.certBadge}
-                whileHover={whileHover}
-                whileTap={whileTap}
-              >
-                <span className={styles.certName}>{cert.name}</span>
-                <span className={styles.certIssuer}>{cert.issuer}</span>
-              </motion.div>
-            ))}
+            {config.certifications.map((cert, i) => {
+              const isLink = cert.url && cert.url !== '#';
+              const BadgeComponent = isLink ? motion.a : motion.div;
+
+              return (
+                <BadgeComponent
+                  key={i}
+                  {...(isLink ? {
+                    href: cert.url,
+                    target: '_blank',
+                    rel: 'noopener noreferrer'
+                  } : {})}
+                  className={`${styles.certBadge} ${!isLink ? styles.noLink : ''}`}
+                  whileHover={isLink ? whileHover : undefined}
+                  whileTap={isLink ? whileTap : undefined}
+                >
+                  <div className={styles.certContent}>
+                    <span className={styles.certName}>{cert.name}</span>
+                    <span className={styles.certIssuer}>{cert.issuer}</span>
+                  </div>
+                  {isLink ? (
+                    <IconExternalLink size={20} className={styles.certIcon} />
+                  ) : (
+                    <span className={styles.certYear}>{cert.year}</span>
+                  )}
+                </BadgeComponent>
+              );
+            })}
           </div>
         </motion.div>
       </div>

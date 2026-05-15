@@ -17,11 +17,6 @@ const IC = {
   award:    `<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>`,
 };
 
-const CERTS = [
-  { name: 'Google UX Design Certificate', url: '/certificates/UX Design_Google.pdf' },
-  { name: 'JinnByte Internship Certificate', url: '/certificates/JinnByte_InternShip_Certificate.pdf' },
-];
-
 const BASE = window.location.origin;
 
 export async function generateResume() {
@@ -117,28 +112,28 @@ export async function generateResume() {
 
     <!-- SIDEBAR -->
     <div class="sb">
-      <div class="ss">
-        <div class="st">${IC.zap} Technical Skills</div>
-        ${skills.map(cat => `
-          <div class="scat">
-            <div class="scn">${cat.category}</div>
-            ${cat.items.map(s => `
-              <div class="ski">
-                <div class="skn"><div class="skd"></div>${s.name}</div>
-                <span class="skl lv-${s.level.toLowerCase().replace(/\s/g,'')}">${s.level}</span>
-              </div>`).join('')}
-          </div>`).join('')}
-      </div>
-
-      <div class="ss">
-        <div class="st">${IC.award} Certifications</div>
-        ${CERTS.map(c => `
-          <div class="cert">
-            <div class="cbar2"></div>
-            <span><a href="${BASE}${c.url}" target="_blank">${c.name}</a></span>
-          </div>`).join('')}
-      </div>
+    <div class="ss">
+      <div class="st">${IC.zap} Technical Skills</div>
+      ${skills.map(cat => `
+        <div class="scat">
+          <div class="scn">${cat.category}</div>
+          ${cat.items.map(s => `
+            <div class="ski">
+              <div class="skn"><div class="skd"></div>${s.name}</div>
+              <span class="skl lv-${s.level.toLowerCase().replace(/\s/g,'')}">${s.level}</span>
+            </div>`).join('')}
+        </div>`).join('')}
     </div>
+
+    <div class="ss">
+      <div class="st">${IC.award} Certifications</div>
+      ${config.certifications.filter(c => c.url && c.url !== '#').map(c => `
+        <div class="cert">
+          <div class="cbar2"></div>
+          <span><a href="${BASE}${c.url}" target="_blank">${c.name}</a></span>
+        </div>`).join('')}
+    </div>
+  </div>
 
     <!-- MAIN -->
     <div class="mn">

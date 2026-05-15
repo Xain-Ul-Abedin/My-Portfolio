@@ -272,12 +272,20 @@
     {
       "name": "Google UX Design Certificate",
       "issuer": "Google",
-      "year": "2024"
+      "year": "2024",
+      "url": "/certificates/UX Design_Google.pdf"
+    },
+    {
+      "name": "JinnByte Internship Certificate",
+      "issuer": "JinnByte Pvt Ltd",
+      "year": "2025",
+      "url": "/certificates/JinnByte_InternShip_Certificate.pdf"
     },
     {
       "name": "Graphics Design Specialist",
       "issuer": "Self-taught",
-      "year": "2024"
+      "year": "2024",
+      "url": "#"
     }
   ]
 }
