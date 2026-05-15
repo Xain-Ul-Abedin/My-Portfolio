@@ -87,24 +87,23 @@ export default function Navigation() {
               {link.label}
             </motion.a>
           ))}
-          <motion.button
-            className={styles.themeToggleBtn}
-            onClick={toggleTheme}
-            whileHover={whileHover}
-            whileTap={whileTap}
-            aria-label="Toggle theme"
-          >
-            {theme === 'dark' ? <IconSun size={20} /> : <IconMoon size={20} />}
-          </motion.button>
         </div>
 
-        <button
-          className={styles.mobileMenuBtn}
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          aria-label="Toggle menu"
-        >
-          {isMobileMenuOpen ? <IconX size={24} /> : <IconMenu size={24} />}
-        </button>
+        <div className={styles.rightControls}>
+          <button className={styles.switchToggle} onClick={toggleTheme} aria-label="Toggle theme">
+            <IconSun size={14} className={styles.switchIcon} />
+            <IconMoon size={14} className={styles.switchIcon} />
+            <div className={`${styles.switchThumb} ${theme === 'light' ? styles.light : styles.dark}`} />
+          </button>
+
+          <button
+            className={styles.mobileMenuBtn}
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            {isMobileMenuOpen ? <IconX size={24} /> : <IconMenu size={24} />}
+          </button>
+        </div>
       </motion.div>
 
       {isMobileMenuOpen && (
@@ -120,13 +119,6 @@ export default function Navigation() {
               {link.label}
             </a>
           ))}
-          <button
-            className={styles.mobileThemeToggle}
-            onClick={toggleTheme}
-          >
-            {theme === 'dark' ? <IconSun size={20} /> : <IconMoon size={20} />}
-            {theme === 'dark' ? 'Light Mode' : 'Dark Mode'}
-          </button>
         </div>
       )}
     </nav>
