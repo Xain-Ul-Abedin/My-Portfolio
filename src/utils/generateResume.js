@@ -101,7 +101,7 @@ export async function generateResume() {
     <div class="hd-rule"></div>
     <div class="cbar">
       <div class="ci">${IC.mail}<a href="mailto:${personal.email}">${personal.email}</a></div>
-      <div class="ci">${IC.linkedin}<a href="${personal.linkedin ? 'https://' + personal.linkedin : '#'}" target="${personal.linkedin ? '_blank' : '_self'}">${personal.linkedin ? personal.linkedin : 'LinkedIn'}</a></div>
+      <div class="ci">${IC.linkedin}<a href="${personal.linkedin ? personal.linkedin : '#'}" target="${personal.linkedin ? '_blank' : '_self'}">${personal.linkedin ? 'LinkedIn Profile' : 'LinkedIn'}</a></div>
       <div class="ci">${IC.github}<a href="${personal.github}" target="_blank">github.com/Xain-Ul-Abedin</a></div>
       <div class="ci">${IC.discord}<span>${personal.discord}</span></div>
     </div>
