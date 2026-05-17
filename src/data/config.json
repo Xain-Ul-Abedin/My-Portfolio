@@ -183,6 +183,56 @@
           "level": "Junior"
         }
       ]
+    },
+    {
+      "category": "AI & Modern Workflow",
+      "items": [
+        {
+          "name": "Prompt Engineering",
+          "level": "Advanced"
+        },
+        {
+          "name": "Vibe Coding",
+          "level": "Intermediate"
+        },
+        {
+          "name": "AI-Assisted Development",
+          "level": "Advanced"
+        },
+        {
+          "name": "Large Language Models (LLMs)",
+          "level": "Intermediate"
+        }
+      ]
+    },
+    {
+      "category": "Professional & Soft Skills",
+      "items": [
+        {
+          "name": "Problem Solving",
+          "level": "Advanced"
+        },
+        {
+          "name": "Adaptability",
+          "level": "Advanced"
+        },
+        {
+          "name": "Team Collaboration",
+          "level": "Advanced"
+        },
+        {
+          "name": "Analytical Thinking",
+          "level": "Advanced"
+        },
+        {
+          "name": "Communication",
+          "level": "Intermediate"
+        },
+        {
+          "name": "Time Management",
+          "level": "Intermediate"
+        }
+      ]
     }
   ],
   "experience": [

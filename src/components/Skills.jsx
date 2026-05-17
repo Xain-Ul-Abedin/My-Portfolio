@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { IconDeviceGamepad, IconShieldCheck, IconSparkles } from '@tabler/icons-react';
+import { IconDeviceGamepad, IconShieldCheck, IconSparkles, IconBrain, IconUsers } from '@tabler/icons-react';
 import { fadeInUp, staggerContainer } from '../styles/animations';
 import config from '../data/config.json';
 import styles from './Skills.module.css';
@@ -7,7 +7,9 @@ import styles from './Skills.module.css';
 const categoryIcons = {
   'Game Development': IconDeviceGamepad,
   'Design & Creative': IconSparkles,
-  'Quality & Management': IconShieldCheck
+  'Quality & Management': IconShieldCheck,
+  'AI & Modern Workflow': IconBrain,
+  'Professional & Soft Skills': IconUsers
 };
 
 export default function Skills() {
