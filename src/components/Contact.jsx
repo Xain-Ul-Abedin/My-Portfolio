@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { IconMail, IconBrandGithub, IconBrandDiscord, IconBrandLinkedin, IconDownload, IconSparkles } from '@tabler/icons-react';
+import { IconMail, IconBrandGithub, IconBrandDiscord, IconBrandLinkedin, IconDownload, IconSparkles, IconWorld } from '@tabler/icons-react';
 import { fadeInUp, staggerContainer, slideInLeft, whileHover, whileTap } from '../styles/animations';
 import { generateResume } from '../utils/generateResume';
 import config from '../data/config.json';
@@ -58,6 +58,23 @@ export default function Contact() {
 
               <div className={styles.contactList}>
                 <motion.a
+                  href="https://xain-ul-abedin.github.io/My-Portfolio/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.contactItem}
+                  whileHover={whileHover}
+                  whileTap={whileTap}
+                >
+                  <div className={styles.contactIcon}>
+                    <IconWorld size={22} />
+                  </div>
+                  <div className={styles.contactDetails}>
+                    <span className={styles.contactLabel}>Portfolio</span>
+                    <span className={styles.contactValue}>Live Demo</span>
+                  </div>
+                </motion.a>
+
+                <motion.a
                   href={`mailto:${personal.email}`}
                   className={styles.contactItem}
                   whileHover={whileHover}
@@ -107,7 +124,7 @@ export default function Contact() {
                 </motion.a>
 
                 <motion.a
-                  href={personal.linkedin ? `https://${personal.linkedin}` : '#'}
+                  href={personal.linkedin || '#'}
                   target={personal.linkedin ? "_blank" : undefined}
                   rel={personal.linkedin ? "noopener noreferrer" : undefined}
                   className={styles.contactItem}

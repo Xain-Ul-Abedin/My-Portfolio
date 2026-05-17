@@ -86,7 +86,7 @@ export default function Hero() {
               </svg>
             </motion.a>
             <motion.a
-              href={personal.linkedin ? `https://${personal.linkedin}` : '#'}
+              href={personal.linkedin || '#'}
               target={personal.linkedin ? "_blank" : undefined}
               rel={personal.linkedin ? "noopener noreferrer" : undefined}
               className={styles.socialLink}
