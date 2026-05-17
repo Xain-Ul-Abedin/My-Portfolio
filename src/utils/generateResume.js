@@ -15,6 +15,7 @@ const IC = {
   code:     `<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>`,
   zap:      `<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>`,
   award:    `<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>`,
+  globe:    `<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>`,
 };
 
 const BASE = window.location.origin;
@@ -100,6 +101,7 @@ export async function generateResume() {
     <div class="hd-tag">${personal.tagline}</div>
     <div class="hd-rule"></div>
     <div class="cbar">
+      <div class="ci">${IC.globe}<a href="https://xain-ul-abedin.github.io/My-Portfolio/" target="_blank">Live Portfolio</a></div>
       <div class="ci">${IC.mail}<a href="mailto:${personal.email}">${personal.email}</a></div>
       <div class="ci">${IC.linkedin}<a href="${personal.linkedin ? personal.linkedin : '#'}" target="${personal.linkedin ? '_blank' : '_self'}">${personal.linkedin ? 'LinkedIn Profile' : 'LinkedIn'}</a></div>
       <div class="ci">${IC.github}<a href="${personal.github}" target="_blank">github.com/Xain-Ul-Abedin</a></div>
