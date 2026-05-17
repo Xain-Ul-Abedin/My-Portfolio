@@ -175,8 +175,12 @@
           "level": "Intermediate"
         },
         {
-          "name": "Version Control (Git)",
+          "name": "Version Control (Git & GitHub)",
           "level": "Intermediate"
+        },
+        {
+          "name": "Google Docs",
+          "level": "Expert"
         },
         {
           "name": "Postman (API Testing)",
