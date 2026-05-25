@@ -25,7 +25,7 @@ export default function About() {
                 <>
                   <div className={`${styles.imageLoader} ${imageLoaded ? styles.loaded : ''}`} />
                   <img 
-                    src={about.image} 
+                    src={`${import.meta.env.BASE_URL}${about.image}`} 
                     alt={personal.name} 
                     className={`${styles.image} ${imageLoaded ? styles.visible : styles.hidden}`} 
                     onLoad={() => setImageLoaded(true)}

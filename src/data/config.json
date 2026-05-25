@@ -12,7 +12,7 @@
   },
   "about": {
     "bio": "I am a BS Software Engineering student specializing in SQA and Project Management. After excelling in SQA internship roles, I am now focusing my passion on becoming a professional Game Developer. I also bring years of self-taught freelance design experience, bridging the gap between quality standards and creative gaming experiences.",
-    "image": "/hero.png"
+    "image": "hero.png"
   },
   "projects": [
     {
@@ -327,13 +327,13 @@
       "name": "Google UX Design Certificate",
       "issuer": "Google",
       "year": "2024",
-      "url": "/certificates/UX Design_Google.pdf"
+      "url": "certificates/UX Design_Google.pdf"
     },
     {
       "name": "JinnByte Internship Certificate",
       "issuer": "JinnByte Pvt Ltd",
       "year": "2025",
-      "url": "/certificates/JinnByte_InternShip_Certificate.pdf"
+      "url": "certificates/JinnByte_InternShip_Certificate.pdf"
     }
   ]
 }
