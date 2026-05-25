@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { IconHome, IconUser, IconDeviceGamepad, IconCode, IconBriefcase, IconMail, IconMenu, IconX, IconSun, IconMoon } from '@tabler/icons-react';
 import { whileHover, whileTap } from '../styles/animations';
 import styles from './Navigation.module.css';
@@ -108,7 +108,7 @@ export default function Navigation() {
 
       {isMobileMenuOpen && (
         <div className={styles.mobileMenu}>
-          {navLinks.map((link, index) => (
+          {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
