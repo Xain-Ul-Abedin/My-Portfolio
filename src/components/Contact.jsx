@@ -58,7 +58,7 @@ export default function Contact() {
 
               <div className={styles.contactList}>
                 <motion.a
-                  href="https://xain-ul-abedin.github.io/My-Portfolio/"
+                  href="https://Xain-Ul-Abedin.github.io/My-Portfolio/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={styles.contactItem}

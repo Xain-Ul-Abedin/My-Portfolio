@@ -101,7 +101,7 @@ export async function generateResume() {
     <div class="hd-tag">${personal.tagline}</div>
     <div class="hd-rule"></div>
     <div class="cbar">
-      <div class="ci">${IC.globe}<a href="https://xain-ul-abedin.github.io/My-Portfolio/" target="_blank">Live Portfolio</a></div>
+      <div class="ci">${IC.globe}<a href="https://Xain-Ul-Abedin.github.io/My-Portfolio/" target="_blank">Live Portfolio</a></div>
       <div class="ci">${IC.mail}<a href="mailto:${personal.email}">${personal.email}</a></div>
       <div class="ci">${IC.linkedin}<a href="${personal.linkedin ? personal.linkedin : '#'}" target="${personal.linkedin ? '_blank' : '_self'}">${personal.linkedin ? 'LinkedIn Profile' : 'LinkedIn'}</a></div>
       <div class="ci">${IC.github}<a href="${personal.github}" target="_blank">github.com/Xain-Ul-Abedin</a></div>
