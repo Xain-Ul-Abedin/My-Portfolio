@@ -42,7 +42,7 @@ export async function generateResume() {
     .cbar{display:flex;justify-content:center;flex-wrap:wrap;gap:4px 18px;}
     .ci{display:flex;align-items:center;gap:4px;color:#a8ccc7;font-size:7.5px;}
     .ci svg{color:#00b894;flex-shrink:0;}
-    .ci a{color:#a8ccc7;}
+    .ci a{color:#a8ccc7;display:inline-block;}
 
     /* BODY */
     .bd{display:flex;flex:1;min-height:0;}
@@ -90,7 +90,7 @@ export async function generateResume() {
     .ft-left{display:flex;align-items:center;gap:16px;}
     .fci{display:flex;align-items:center;gap:4px;color:#8ab8b2;font-size:7px;}
     .fci svg{color:#00b894;}
-    .fci a{color:#8ab8b2;}
+    .fci a{color:#8ab8b2;display:inline-block;}
     .ft-right{font-size:7px;color:#4a7a74;font-weight:300;letter-spacing:1px;}
   </style>
   </head><body>
@@ -105,7 +105,7 @@ export async function generateResume() {
       <div class="ci">${IC.mail}<a href="mailto:${personal.email}">${personal.email}</a></div>
       <div class="ci">${IC.linkedin}<a href="${personal.linkedin ? personal.linkedin : '#'}" target="${personal.linkedin ? '_blank' : '_self'}">${personal.linkedin ? 'LinkedIn Profile' : 'LinkedIn'}</a></div>
       <div class="ci">${IC.github}<a href="${personal.github}" target="_blank">github.com/Xain-Ul-Abedin</a></div>
-      <div class="ci">${IC.discord}<span>${personal.discord}</span></div>
+      <div class="ci">${IC.discord}<a href="https://discord.com/users/${personal.discord}" target="_blank">${personal.discord}</a></div>
     </div>
   </div>
 
@@ -186,7 +186,7 @@ export async function generateResume() {
   <div class="ft">
     <div class="ft-left">
       <div class="fci">${IC.phone}<a href="tel:${personal.phone}">${personal.phone}</a></div>
-      <div class="fci">${IC.location}<span>${personal.address}</span></div>
+      <div class="fci">${IC.location}<a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(personal.address)}" target="_blank">${personal.address}</a></div>
     </div>
     <div class="ft-right">ZAIN UL-ABEDIN &nbsp;·&nbsp; ${new Date().getFullYear()}</div>
   </div>
@@ -220,8 +220,22 @@ export async function generateResume() {
     const linkData = Array.from(iDoc.querySelectorAll('a[href]'))
       .map(a => {
         const r = a.getBoundingClientRect();
+        let href = a.getAttribute('href');
+        
+        // Resolve relative and root-relative URLs cleanly for PDF viewers
+        if (href && !href.startsWith('http') && !href.startsWith('mailto:') && !href.startsWith('tel:')) {
+          const cleanHref = href.startsWith('/') ? href.slice(1) : href;
+          const cleanBase = BASE.startsWith('/') ? BASE.slice(1) : BASE;
+          
+          if (cleanBase && cleanHref.startsWith(cleanBase)) {
+            href = 'https://Xain-Ul-Abedin.github.io/' + cleanHref;
+          } else {
+            href = 'https://Xain-Ul-Abedin.github.io' + (BASE.endsWith('/') ? BASE : BASE + '/') + cleanHref;
+          }
+        }
+
         return {
-          href: a.href,  // absolute URL resolved by iframe context
+          href,
           x: r.left,
           y: r.top,
           w: r.width,
