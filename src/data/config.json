@@ -11,7 +11,7 @@
     "address": "Street LDA, House no 39, Near Govt. Filter Clinic Hospital Wahdat Colony Lahore"
   },
   "about": {
-    "bio": "I am a BS Software Engineering student specializing in SQA and Project Management. After excelling in SQA internship roles, I am now focusing my passion on becoming a professional Game Developer. I also bring years of self-taught freelance design experience, bridging the gap between quality standards and creative gaming experiences.",
+    "bio": "I am a BS Software Engineering student specializing in SQA and Project Management. Having completed my 4th semester, I am actively seeking a summer internship and career opportunities to apply my skills. I am focusing my passion on becoming a professional Game Developer and QA specialist. I also bring years of freelance design experience, bridging the gap between quality standards and creative gaming experiences.",
     "image": "hero.png"
   },
   "projects": [
@@ -254,9 +254,9 @@
       "company": "Punjab Tianjin University Of Technology",
       "location": "Lahore",
       "period": "2024 - Present",
-      "duration": "4th Semester",
-      "marks": "3.71/4.00 CGPA",
-      "description": "Completed specialized courses in Software Quality Assurance (SQA), Quality Control (QC), and Software Operations Management (SOM). Currently in 4th semester, maintaining a CGPA of 3.71/4.00."
+      "duration": "4th Semester Completed",
+      "marks": "3.76/4.00 CGPA",
+      "description": "Completed specialized courses in Software Quality Assurance (SQA), Quality Control (QC), and Software Operations Management (SOM). Completed 4th semester, maintaining a CGPA of 3.76/4.00."
     },
     {
       "title": "FSC Pre Engineering",
@@ -279,13 +279,13 @@
   ],
   "resume": {
     "phone": "+92-3XX-XXXXXXX",
-    "summary": "Aspiring game developer with a passion for creating engaging 2D gaming experiences. Currently pursuing BS in Software Engineering Technology. Equipped with skills in Unity 2D and Godot game engines, complemented by design capabilities and QA experience. Eager to contribute to innovative game development teams.",
+    "summary": "Aspiring game developer with a passion for creating engaging 2D gaming experiences. Currently pursuing BS in Software Engineering Technology (completed 4th semester). Equipped with skills in Unity 2D and Godot game engines, complemented by design capabilities and QA experience. Eager to contribute to innovative game development teams through a summer internship or career opportunities.",
     "education": {
       "degree": "BS Software Engineering Technology",
       "institution": "Punjab Tianjin University Of Technology",
       "location": "Lahore, Pakistan",
       "period": "2024 - Present",
-      "semester": "4th Semester (CGPA: 3.71/4.00)"
+      "semester": "4th Semester Completed (CGPA: 3.76/4.00)"
     },
     "certifications": [
       "Google UI/UX Design Certificate",
@@ -298,7 +298,7 @@
       "institution": "Punjab Tianjin University Of Technology",
       "location": "Lahore, Pakistan",
       "period": "2024 - Present",
-      "note": "4th Semester | CGPA: 3.71/4.00"
+      "note": "4th Semester Completed | CGPA: 3.76/4.00"
     },
     {
       "degree": "FSC Pre Engineering",
@@ -334,6 +334,12 @@
       "issuer": "JinnByte Pvt Ltd",
       "year": "2025",
       "url": "certificates/JinnByte_InternShip_Certificate.pdf"
+    },
+    {
+      "name": "BSSE 4th Semester Transcript",
+      "issuer": "Punjab Tianjin University Of Technology",
+      "year": "2026",
+      "url": "certificates/4th sem.pdf"
     }
   ]
 }
