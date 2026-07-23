@@ -86,7 +86,7 @@ export default function Projects() {
                     whileTap={whileTap}
                   >
                     <IconExternalLink size={18} />
-                    Play Demo
+                    {project.liveLabel || 'Play Demo'}
                   </motion.a>
                 )}
               </div>

@@ -62,6 +62,23 @@
       "github": "https://github.com/Xain-Ul-Abedin/CoffeeHavenApp",
       "demo": null,
       "image": null
+    },
+    {
+      "title": "Wallpaper Studio",
+      "subtitle": "Procedural Wallpaper Generator",
+      "engine": "HTML5 Canvas / Vanilla JS",
+      "description": "A fully browser-based procedural wallpaper generator powered by pure vector mathematics and HTML5 Canvas. Features 4 pattern styles, multi-device export (4K Desktop, Tablet, Mobile), dark and light modes, a custom palette studio with 10-shade generation, and a comparison slider. Zero dependencies, zero tracking, runs entirely offline.",
+      "tech": [
+        "HTML5 Canvas",
+        "Vanilla JS",
+        "CSS3",
+        "Procedural Math",
+        "UX Design"
+      ],
+      "status": "Completed",
+      "github": "https://github.com/Xain-Ul-Abedin/Wallpaper-Studio",
+      "demo": "https://wallpaper-studio-xain.vercel.app",
+      "liveLabel": "Live Preview"
     }
   ],
   "skills": [
